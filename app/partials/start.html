@@ -1,0 +1,67 @@
+<div class="container-fluid wrapper">
+    <div class="row wrapper">
+        <div class="col-md-3 col-sm-5 col-xs-12 controller">
+            <div class="row logobox">
+                <h1>GoSimply</h1>
+            </div>
+            <div class="row controls">
+                <span class="flaticon-bus21"></span>
+                        <div class="btn-group selector">
+                        <button type="button" class="btn btn-default appbutton choicetop" ng-class="{active: services[0] == selectedService}" ng-click="selectService(services[0])">{{services[0]}}</button>
+                        <button type="button" class="btn btn-default appbutton choicetop" ng-class="{active: services[1] == selectedService}" ng-click="selectService(services[1])">{{services[1]}}</button>
+                    </div>
+                     <div class="btn-group selector">
+                        <button type="button" class="btn btn-default appbutton choicebottom" ng-class="{active: services[2] == selectedService}" ng-click="selectService(services[2])">{{services[2]}}</button>
+                        <button type="button" class="btn btn-default appbutton choicebottom" ng-class="{active: services[3] == selectedService}" ng-click="selectService(services[3])">{{services[3]}}</button>
+                    </div>
+                
+                <div class="modeselector routesection">
+                    <span class="flaticon-location27 icon2" ng-class="{deactivated: !selectedService}"></span>
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle appbutton appdropdown" data-toggle="dropdown" ng-disabled="!selectedService">
+                            <span ng-show="selectedRoute.label != ROUTE_MESSAGE">Route: </span>{{selectedRoute.label}}
+                          </button>
+                          <span class="trip_headsign">{{trip_headsign}}</span>
+                          <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="route in routes" ng-click="selectRoute($index, route)"><a>{{route.label}}</a></li>
+                          </ul>
+                        </div>
+                    
+                    <div class="modeselector">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle appbutton appdropdown" data-toggle="dropdown" ng-disabled="selectedRoute.label == ROUTE_MESSAGE">
+                            <div class="buttontext"><span ng-show="fromStop.STOPNAME != FROM_STOP_MESSAGE">From: </span>{{fromStop.STOPNAME}}</div> <div class="downarrow"></div>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="stop in stops" ng-click="selectFromStop($index, stop)"><a>{{stop.STOPNAME}}</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="modeselector">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle appbutton appdropdown" data-toggle="dropdown" ng-disabled="fromStop.STOPNAME == FROM_STOP_MESSAGE">
+                            <div class="buttontext"><span ng-show="toStop.STOPNAME != TO_STOP_MESSAGE">To: </span>{{toStop.STOPNAME}}</div><div class="downarrow"></div>
+                          </button>
+                          <ul class="dropdown-menu" role="menu">
+                            <li ng-repeat="stop in stops" ng-click="selectToStop($index, stop)"><a>{{stop.STOPNAME}}</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <span class="flaticon-calendar4 icon3" ng-class="{deactivated: toStop.STOPNAME == TO_STOP_MESSAGE}"></span>
+                <div class="modeselector">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default appbutton weekdays" ng-repeat="day in days" ng-class="{active: day == selectedDay}" ng-click="selectDay($index, day)" ng-disabled="toStop.STOPNAME == TO_STOP_MESSAGE">{{day}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-9 col-sm-7 col-xs-12 mainview">
+            <p class="displaytext" ng-show="toStop.STOPNAME != TO_STOP_MESSAGE">What time do you need to be there?</p>
+            <div id="spinner-container" ng-show="loading"></div>
+            <div class="graphContainer"></div>
+            <p class="displaytext" ng-show="duration">Be at <span>{{fromStop.STOPNAME}}</span> for <span>{{arriveTime(departureTime, duration)}}</span> and have <span>€{{expectedFare}}</span> ready. The trip will take <span>{{duration}} minutes.</span></p>
+        </div>
+    </div>
+</div>

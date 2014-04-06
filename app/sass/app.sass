@@ -1,0 +1,209 @@
+/* COLORS */
+$background: #394251
+$secondary: #7ed979
+$text: #333
+ 
+/* FONT SETTINGS */
+$fs: 16px
+$lh: 24px
+
+
+@import 'includes'
+
+@include font-face("Lobster2", font-files("https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/LobsterTwo-Bold.ttf"))
+@include font-face("Lato", font-files("https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/Lato-Regular.ttf"))
+@include font-face("Flaticon", font-files("https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.eot", "https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.woff", "https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.ttf", "https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.svg"))
+
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after    
+    font-family: Flaticon
+    font-size: 40px
+    font-style: normal
+    margin: 0 auto
+    display: block
+    width: 40px
+    color: white
+
+
+.flaticon-bus21:before 
+    content: "\e000"
+.flaticon-calendar4:before
+    content: "\e001"
+.flaticon-location27:before
+    content: "\e002"
+*
+    box-sizing: border-box
+    
+.icon2
+
+    &:before
+        margin-bottom: 10px
+        font-size: 30px
+        width: 20px
+        margin-top: 10px
+        padding-top: 5px
+.icon3
+    &:before
+        font-size: 30px
+        width: 20px
+        margin-top: 20px
+        margin-bottom: 10px
+
+
+
+.displaytext
+    font-size: 1.5em
+    line-height: 1.2em
+    color: white
+    span
+        color: $secondary
+        font-size: .9em
+.deactivated
+    &:before
+        opacity: .6
+.buttontext
+    float: left
+.downarrow
+    position: relative
+    margin-top: 10px
+    margin-left: 7px
+    float: left
+    border: solid transparent
+    content: ""
+    height: 0
+    width: 0
+    pointer-events: none
+    border-color: rgba(255, 255, 255, 0)
+    border-top-color: #fff
+    border-width: 7px
+
+.nav, .pagination, .carousel, .panel-title a
+    cursor: pointer
+
+.navbar-inner
+    background-color: rgb(255, 235, 0)
+    color: white
+
+html, body
+    height: 100%
+.wrapper
+    height: 100%
+body
+    font-family: "Lato", Arial, sans-serif
+    font-size: 24px
+.map 
+    height: 180px
+    width: 180px
+    @include transition-duration(.1s)
+.mainview
+    height: 100%
+    background-color: #353A42
+    text-align: center
+    padding: .5em 1em 1em 1em
+.controller
+    background-color: $background
+    height: 100%
+    .logobox
+        padding: 1.5em 0
+        color: white
+        background: $secondary
+        text-align: center
+        font-family: "Lobster2", Arial, cursive
+        border-bottom: 5px solid darken($secondary, 10%)
+        h1
+            font-size: 2em
+            font-weight: bold
+    .controls
+        padding: 15px 10px
+        font-size: .7em
+        color: lighten($background, 50%)
+        
+        .appbutton
+            font-size: 1em
+            background: none
+            //background-color: $secondary
+            @include transition-duration(.5s)
+            @include transition-property(background-color)
+            color: white
+            border: 1px solid white
+            //border: 1px solid darken($secondary, 10%)
+            //border-bottom: 3px solid darken($secondary, 10%)
+            &:hover
+                @include transition-duration(.2s)
+                //background-color: lighten($secondary, 10%)
+                background-color: rgba(255,255,255, 0.8)
+            &:active
+                @include transition-duration(.2s)
+                
+                background-color: white
+                color: $background
+                //color: darken(white, 10%)
+                //background-color: darken($secondary, 5%)
+                //border-bottom: 0px solid darken($secondary, 10%)
+                //top: 3px
+            &.active
+                @include transition-duration(.2s)
+                
+                background-color: white
+                color: $background
+                //color: darken(white, 10%)
+                //background-color: darken($secondary, 5%)
+                //border-bottom: 0px solid darken($secondary, 10%)
+                //top: 3px
+            &.appdropdown
+                font-size: 1em
+                border-size: 2px
+                max-width: 300px
+                &:active
+                    top: 0
+                    //border-bottom: 3px solid darken($secondary, 10%)
+            &.choicetop, &.choicebottom
+                width: 50%
+            &.choicetop
+                @include border-bottom-radius(0)
+                border-bottom: 0
+            &.choicebottom
+                @include border-top-radius(0)
+            
+        .selector
+            width: 100%
+        .modeselector
+            width: 100%
+            &:first-child
+                margin-top: 0s
+            .btn-group
+                margin: 0 auto
+        .routesection
+            margin-top: 20px
+            .modeselector
+                margin-top: 10px
+        .weekdays
+            font-size: .9em
+.dropdown-menu
+    height: auto
+    max-height: 204px
+    overflow-x: hidden
+    li
+        cursor: pointer
+#spinner-container
+    position: absolute
+    top: 50%
+    left: 50%
+.graphContainer
+    width: 100%
+    height: 80%
+    float: right
+    margin: 0 auto
+
+.info
+    width: 100%
+    height: 5%
+    color: #fff
+    
+.duration
+    font: 'lato'
+.highcharts-series
+    @include transition-property(all)
+    @include transition-duration(.2s)
+    

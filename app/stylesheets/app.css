@@ -1,0 +1,466 @@
+/* COLORS */
+/* FONT SETTINGS */
+/* COMPASS */
+/* line 17, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../lib/ruby/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* CUSTOM */
+/* EM CALCULATOR */
+/* REM CALCULATOR - Chris Coyer - http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/ */
+/* MAKE SURE TO SET YOUR BASE FONT SIZE TO 10PX!!!! */
+/*EXPERIMENTAL, NOT WORKING */
+/* END BROKEN REM CALCULATOR */
+/* BOILERPLATE HELPERS */
+/* line 64, ../sass/_helpers.sass */
+.island {
+  margin-bottom: 24px;
+}
+/* line 61, ../sass/_helpers.sass */
+.island > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 72, ../sass/_helpers.sass */
+.left {
+  float: left;
+}
+
+/* line 75, ../sass/_helpers.sass */
+.right {
+  float: right;
+}
+
+/* line 78, ../sass/_helpers.sass */
+.clear {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 81, ../sass/_helpers.sass */
+em {
+  font-weight: bold;
+}
+
+/* line 84, ../sass/_helpers.sass */
+.last {
+  margin-right: 0;
+}
+
+/* line 87, ../sass/_helpers.sass */
+.honey {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/* line 32, ../sass/_helpers.sass */
+.honey .focusable:active, .honey .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 90, ../sass/_helpers.sass */
+label, input[type="submit"] {
+  cursor: pointer;
+}
+
+/* line 93, ../sass/_helpers.sass */
+button, input, select, textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+
+@font-face {
+  font-family: "Lobster2";
+  src: url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/LobsterTwo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: "Flaticon";
+  src: url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.eot) format('embedded-opentype'), url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.woff) format('woff'), url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.ttf) format('truetype'), url(https://c9.io/tschaeff/sapinnojam/workspace/app/fonts/flaticon.svg) format('svg');
+}
+
+/* line 18, ../sass/app.sass */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 40px;
+  font-style: normal;
+  margin: 0 auto;
+  display: block;
+  width: 40px;
+  color: white;
+}
+
+/* line 29, ../sass/app.sass */
+.flaticon-bus21:before {
+  content: "\e000";
+}
+
+/* line 31, ../sass/app.sass */
+.flaticon-calendar4:before {
+  content: "\e001";
+}
+
+/* line 33, ../sass/app.sass */
+.flaticon-location27:before {
+  content: "\e002";
+}
+
+/* line 35, ../sass/app.sass */
+* {
+  box-sizing: border-box;
+}
+
+/* line 40, ../sass/app.sass */
+.icon2:before {
+  margin-bottom: 10px;
+  font-size: 30px;
+  width: 20px;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+/* line 47, ../sass/app.sass */
+.icon3:before {
+  font-size: 30px;
+  width: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* line 55, ../sass/app.sass */
+.displaytext {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  color: white;
+}
+/* line 59, ../sass/app.sass */
+.displaytext span {
+  color: #7ed979;
+  font-size: 0.9em;
+}
+
+/* line 63, ../sass/app.sass */
+.deactivated:before {
+  opacity: 0.6;
+}
+
+/* line 65, ../sass/app.sass */
+.buttontext {
+  float: left;
+}
+
+/* line 67, ../sass/app.sass */
+.downarrow {
+  position: relative;
+  margin-top: 10px;
+  margin-left: 7px;
+  float: left;
+  border: solid transparent;
+  content: "";
+  height: 0;
+  width: 0;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: white;
+  border-width: 7px;
+}
+
+/* line 81, ../sass/app.sass */
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
+
+/* line 84, ../sass/app.sass */
+.navbar-inner {
+  background-color: #ffeb00;
+  color: white;
+}
+
+/* line 88, ../sass/app.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 90, ../sass/app.sass */
+.wrapper {
+  height: 100%;
+}
+
+/* line 92, ../sass/app.sass */
+body {
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 24px;
+}
+
+/* line 95, ../sass/app.sass */
+.map {
+  height: 180px;
+  width: 180px;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+/* line 99, ../sass/app.sass */
+.mainview {
+  height: 100%;
+  background-color: #353a42;
+  text-align: center;
+  padding: 0.5em 1em 1em 1em;
+}
+
+/* line 104, ../sass/app.sass */
+.controller {
+  background-color: #394251;
+  height: 100%;
+}
+/* line 107, ../sass/app.sass */
+.controller .logobox {
+  padding: 1.5em 0;
+  color: white;
+  background: #7ed979;
+  text-align: center;
+  font-family: "Lobster2", Arial, cursive;
+  border-bottom: 5px solid #58ce51;
+}
+/* line 114, ../sass/app.sass */
+.controller .logobox h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 117, ../sass/app.sass */
+.controller .controls {
+  padding: 15px 10px;
+  font-size: 0.7em;
+  color: #bac2cf;
+}
+/* line 122, ../sass/app.sass */
+.controller .controls .appbutton {
+  font-size: 1em;
+  background: none;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  color: white;
+  border: 1px solid white;
+}
+/* line 132, ../sass/app.sass */
+.controller .controls .appbutton:hover {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* line 136, ../sass/app.sass */
+.controller .controls .appbutton:active {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background-color: white;
+  color: #394251;
+}
+/* line 145, ../sass/app.sass */
+.controller .controls .appbutton.active {
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  background-color: white;
+  color: #394251;
+}
+/* line 154, ../sass/app.sass */
+.controller .controls .appbutton.appdropdown {
+  font-size: 1em;
+  border-size: 2px;
+  max-width: 300px;
+}
+/* line 158, ../sass/app.sass */
+.controller .controls .appbutton.appdropdown:active {
+  top: 0;
+}
+/* line 161, ../sass/app.sass */
+.controller .controls .appbutton.choicetop, .controller .controls .appbutton.choicebottom {
+  width: 50%;
+}
+/* line 163, ../sass/app.sass */
+.controller .controls .appbutton.choicetop {
+  -moz-border-radius-bottomleft: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+}
+/* line 166, ../sass/app.sass */
+.controller .controls .appbutton.choicebottom {
+  -moz-border-radius-topleft: 0;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+/* line 169, ../sass/app.sass */
+.controller .controls .selector {
+  width: 100%;
+}
+/* line 171, ../sass/app.sass */
+.controller .controls .modeselector {
+  width: 100%;
+}
+/* line 173, ../sass/app.sass */
+.controller .controls .modeselector:first-child {
+  margin-top: 0s;
+}
+/* line 175, ../sass/app.sass */
+.controller .controls .modeselector .btn-group {
+  margin: 0 auto;
+}
+/* line 177, ../sass/app.sass */
+.controller .controls .routesection {
+  margin-top: 20px;
+}
+/* line 179, ../sass/app.sass */
+.controller .controls .routesection .modeselector {
+  margin-top: 10px;
+}
+/* line 181, ../sass/app.sass */
+.controller .controls .weekdays {
+  font-size: 0.9em;
+}
+
+/* line 183, ../sass/app.sass */
+.dropdown-menu {
+  height: auto;
+  max-height: 204px;
+  overflow-x: hidden;
+}
+/* line 187, ../sass/app.sass */
+.dropdown-menu li {
+  cursor: pointer;
+}
+
+/* line 189, ../sass/app.sass */
+#spinner-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 193, ../sass/app.sass */
+.graphContainer {
+  width: 100%;
+  height: 80%;
+  float: right;
+  margin: 0 auto;
+}
+
+/* line 199, ../sass/app.sass */
+.info {
+  width: 100%;
+  height: 5%;
+  color: white;
+}
+
+/* line 204, ../sass/app.sass */
+.duration {
+  font: "lato";
+}
+
+/* line 206, ../sass/app.sass */
+.highcharts-series {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
